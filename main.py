@@ -10,7 +10,7 @@ from celery import Celery
 import celery.exceptions
 from config import *
 
-WORKING_DIR="/tmp"
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
