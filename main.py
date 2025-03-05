@@ -73,7 +73,7 @@ async def xmrgdaterange(    start_date: str,
                                              end_date,
                                              file.filename,
                                              contents, email_address],
-                                        task_id=task_id)
+                                        task_id=str(task_id))
                 response_message = {
                     'message': "Job Posted. The results will be emailed when the processing has completed."}
             except Exception as e:
