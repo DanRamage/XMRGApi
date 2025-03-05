@@ -77,6 +77,7 @@ async def xmrgdaterange(    start_date: str,
                 response_message = {
                     'message': "Job Posted. The results will be emailed when the processing has completed."}
             except Exception as e:
+                logger.exception(e)
                 response.status_code = 500
                 response_message = {'message': "Error with the job posting or request."}
             finally:
