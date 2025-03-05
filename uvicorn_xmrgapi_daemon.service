@@ -1,0 +1,13 @@
+[Unit]
+Description=XMRG Uvicorn FastAPI Server
+After=network.target
+
+[Service]
+User=xeniaprod
+Group=www-data
+WorkingDirectory=/var/www/xmrgapihowsmybeach/
+ExecStart=/usr/local/virtualenv/pyenv-3.11/bin/uvicorn main:app --host 0.0.0.0 --port 8000 --log-config=/var/www/xmrgapihowsmybeach/xmrgapi_logging.conf
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
